@@ -1,0 +1,82 @@
+<div ng-controller="StatusController" ng-init="init()">
+
+<h1 align="center"   style="color:#069">eSign status</h1>
+   
+    <table border="3" align="center" width="500"  id="fixedheight" bordercolor="#013246">
+        <tr>    
+            <td><label for="matchSuccessHash" width="100">Response hash status</label></td> 
+            <td><input type="text" ng-model="matchSuccessHash" name="matchSuccessHash" id="matchSuccessHash" value={{matchSuccessHash}} style="display:table-cell; width:100%"/></td>
+        </tr>    
+    </table> 
+    <br>
+    <table border="3" align="center" width="500"  id="fixedheight" bordercolor="#013246"> 
+        <tr>
+            <td><label for="Name" width="100">SaCode</label></td> 
+            <td><input type="text" ng-model="saCode" name="name" id="name" style="display:table-cell; width:100%" /></td>
+        </tr>  
+        <tr>
+            <td><label for="Name" width="100">RequestId</label></td> 
+            <td><input type="text" ng-model="requestId" name="name" id="name" style="display:table-cell; width:100%" /></td>
+        </tr>
+        <tr>
+            <td><label for="Name" width="100">Doc No</label></td> 
+            <td><input type="text" ng-model="docNo" name="name" id="name" style="display:table-cell; width:100%" /></td>
+        </tr> 
+        <tr>    
+            <td colspan="2"><a href="https://preprod.aadhaarbridge.com/api/_download/{{saCode}}/{{requestId}}/{{docNo}}" target="_blank">Download</a></td>
+        </tr>   
+    </table>
+</div>
+
+<style>
+
+    #fixedheight {
+        
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 16px;
+    
+    }
+    
+#fixedheight tr {
+    height: 30px;
+    text-align: center;
+   
+}
+
+    #fixedheight td {
+    font-size: 16px;
+}
+    
+table tr td:first-child{
+    width:200px;
+}
+    
+    
+   input {
+    border: none;
+    background: transparent;
+    align-content: center;
+       text-align: center;
+       font-size: 16px;
+    
+}
+    
+.buttons 
+{
+   display: inline-block;
+   width: 20%;       /* set to 100% */
+   height: 50%;      /* set to 100% */
+   margin-bottom: 0.5em;
+   padding-top: .6em;
+   padding-bottom: .6em;
+   color: #fff;
+   background-color: #46A6CD;
+   border-radius: 5px;
+   border: solid #cccccc 1px;
+   box-shadow: 2px 2px 1px #888888;
+display: block;
+margin: auto;
+    font-size:14; 
+}
+</style>

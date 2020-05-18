@@ -1,0 +1,111 @@
+<div ng-controller="HomeController">
+<h2 align="center"   style="color:#069">{{message}}</h3>
+<form method="post" name="payuForm" id="payuForm" action="https://preprod.aadhaarbridge.com/api/_init">  
+    <table border="12" align="center" width="550"  id="fixedheight" bordercolor="#013246">
+    <tr>    
+    <td><label for="male" width="100">SUBAUA Code</label></td> <td><input type="text" ng-model="saCode" name="saCode" id="saCode" value="72372e" style="display:table-cell; width:100%" /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">Request Id</label></td> <td><input type="text" ng-model="requestId" name="requestId" id="requestId" style="display:table-cell; width:100%"  /></td>
+    </tr>
+    <td><label for="male">Timestamp</label></td> <td><input type="text" ng-model="timeStamp" name="timeStamp" id="timeStamp" style="display:table-cell; width:100%"  /></td>
+    </tr>
+    <td><label for="male">API</label></td> <td><input type="text" ng-model="api" name="api" id="api" value="KYC" style="display:table-cell; width:100%"  /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">Purpose</label></td> <td><input type="text" name="purpose" id="purpose" value="testing" style="display:table-cell; width:100%" /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">OTP</label></td> <td><input type="text" name="otp" id="otp" value="Y" style="display:table-cell; width:100%" /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">FPrint</label></td> <td><input type="text" name="fingerPrint" id="fingerPrint" value="N" style="display:table-cell; width:100%" /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">Cert-ID</label></td> <td><input type="text" name="certId" id="certId" value="684dd980-7783-477a-b9b1-bbc9363e44fe" style="display:table-cell; width:100%" /></td>
+    </tr>
+    
+    <tr>    
+    <td><label for="male">SuccessUrl</label></td> <td><input type="text" name="successUrl" id="successUrl" value="https://klqa.veri5digital.com/esign-app/index.html#/status" 
+                                                             style="display:table-cell; width:100%" /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">Failure Url</label></td> <td><input type="text" name="failureUrl" id="failureUrl" value="https://klqa.veri5digital.com/esign-app/index.html#/status" 
+                                                              style="display:table-cell; width:100%" /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">channel</label></td> <td><input type="text" name="channel" id="channel" value="BOTH"  style="display:table-cell; width:100%" ></td>
+    </tr>
+    <tr>    
+    <td><label for="male">pdf</label></td> <td><input type="text" name="pdf" id="pdf"
+                                                      style="display:table-cell; width:100%" /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">rawRes</label></td> <td><input type="text" name="rawRes" id="rawRes" style="display:table-cell; width:100%" /></td>
+    </tr>
+    <!-- <tr>    
+    <td><label for="male">AuthCaptureData</label></td> <td><input type="text" name="auth-capture-data" id="auth-capture-data" style="display:table-cell; width:100%" ></td>
+    </tr> -->
+    <tr>    
+    <td colspan="2"><input type="button" value="Calculate Hash" ng-click="calculateHash()" 
+                           
+                         class="buttons"   /></td>
+    </tr>
+    <tr>    
+    <td><label for="male">Hash is</label></td> <td><input type="text" ng-model="hash" name="hash" id="hash" value={{hash}} style="display:table-cell; width:100%" ></td>
+    </tr>
+    <tr>    
+    <td colspan="2"><input type="submit" value="Submit" id="btn-pay" class="buttons"/></td>
+    </tr>
+    </table>
+</form>
+
+<!-- <button type="submit" ng-click="DoKyc()"> DoKYC</button> -->
+<style>
+
+    #fixedheight {
+        
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 16px;
+    
+    }
+    
+    #fixedheight td {
+    font-size: 20px;
+}
+    
+    
+#fixedheight tr {
+    height: 30px;
+    text-align: center;
+}
+
+   input {
+    border: none;
+    background: transparent;
+    align-content: center;
+       text-align: center;
+       font-size: 12px;
+    
+}
+    
+.buttons 
+{
+   display: inline-block;
+   width: 30%;       /* set to 100% */
+   height: 50%;      /* set to 100% */
+   margin-bottom: 0.5em;
+   padding-top: .6em;
+   padding-bottom: .6em;
+   color: #fff;
+   background-color: #46A6CD;
+   border-radius: 5px;
+   border: solid #cccccc 1px;
+   box-shadow: 2px 2px 1px #888888;
+display: block;
+margin: auto;
+    font-size:14; 
+}
+</style>
+</div>

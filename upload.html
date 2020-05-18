@@ -1,0 +1,107 @@
+<div ng-controller="UploadController">
+<h2 align="center" style="color:#069">Upload Form</h2>
+  <form action="https://preprod.aadhaarbridge.com/api/_upload" method="post" enctype="multipart/form-data">
+    <table border="12" align="center" width="600"  id="fixedheight" bordercolor="#013246">
+    <tr>    
+      <td>SubAUA Code: </td>
+      <td><input style="display:table-cell; width:100%" type="text" name="saCode" ng-model="saCode"></td>
+    </tr>
+    <tr>    
+      <td>Request id: </td>
+      <td><input style="display:table-cell; width:100%" type="text" name="requestId" ng-model="requestId"></td>
+    </tr>
+    <tr>    
+      <td>Document no: </td>
+      <td><input style="display:table-cell; width:100%" type="text" name="docNo" ng-model="docNo"></td>
+    </tr>
+    <tr>    
+      <td>File1: </td>
+      <td><input style="display:table-cell; width:100%" type="file" accept="application/pdf" name="file1"></td>
+    </tr>
+    <tr>    
+    <td>Rectangle: </td><td><input style="display:table-cell; width:100%" type="text" name="rectangle" >
+    </td>
+    </tr>
+    <tr>    
+    <td>Page no: </td><td><input style="display:table-cell; width:100%" type="text" name="pageNo" >
+    </td>
+    </tr>
+    <tr>    
+    <td>
+    docType: </td><td><input style="display:table-cell; width:100%" type="text" name="docType" >
+    </td>
+    </tr>
+    <tr>    
+    <td>
+    location: </td><td><input style="display:table-cell; width:100%" type="text" name="location" >
+    </td>
+    </tr>
+    <tr>    
+    <td>
+    reason: </td><td><input style="display:table-cell; width:100%" type="text" name="reason" >
+    </td>
+    </tr>
+    <tr>     
+    <td colspan="2"><input type="button" value="Calculate Hash" ng-click="calculateHash()" 
+                           
+                         class="buttons"   /></td>
+    </tr>
+    <tr>    
+      <br>
+    <td><label for="male">Hash is</label></td> <td><input style="display:table-cell; width:100%" type="text" ng-model="hash" name="hash" id="hash" value={{hash}} style="display:table-cell; width:100%" ></td>
+    </tr>      
+    <!--Hash: <input style="display:table-cell; width:100%" type="text" name="hash" >-->   
+    <tr><td colspan="2">
+    <button class="buttons"  type="submit">Submit</button>
+      </td>
+    </tr>
+  </table>
+  </form>
+</div>
+<style>
+
+    #fixedheight {
+        
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 16px;
+    
+    }
+    
+    #fixedheight td {
+    font-size: 20px;
+}
+    
+    
+#fixedheight tr {
+    height: 30px;
+    text-align: center;
+}
+
+   input {
+    border: none;
+    background: transparent;
+    align-content: center;
+       text-align: center;
+       font-size: 12px;
+    
+}
+    
+.buttons 
+{
+   display: inline-block;
+   width: 30%;       /* set to 100% */
+   height: 50%;      /* set to 100% */
+   margin-bottom: 0.5em;
+   padding-top: .6em;
+   padding-bottom: .6em;
+   color: #fff;
+   background-color: #46A6CD;
+   border-radius: 5px;
+   border: solid #cccccc 1px;
+   box-shadow: 2px 2px 1px #888888;
+display: block;
+margin: auto;
+    font-size:14; 
+}
+</style>
